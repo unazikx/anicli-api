@@ -33,7 +33,7 @@ class HdrezkaApiPayloadMovie(TypedDict):
 
 
 class Extractor(BaseExtractor):
-    BASE_URL = "https://hdrezka-home.tv"
+    BASE_URL = "http://rezka.fi"
 
     def search(self, query: str) -> list["Search"]:
         result = PageSearch.fetch(self.http, query=query).parse()
